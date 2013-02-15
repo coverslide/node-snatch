@@ -1,0 +1,15 @@
+{
+  "name": "snatch",
+  "version": "0.0.0",
+  "description": "Snatches the contents of a stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "tape": "~0.2.2"
+  }
+}
