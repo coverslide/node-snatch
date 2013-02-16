@@ -3,6 +3,8 @@ module.exports = snatch
 var T_BUFFER = 1
 var T_STRING = 2
 
+var buffers = typeof Buffer != 'undefined'
+
 function snatch(stream, cb){
   var type
   var data
@@ -12,7 +14,7 @@ function snatch(stream, cb){
   //assume all data is buffer or string & won't change type 
   stream.on('data', function(d){
     if(!type){
-      if(Buffer.isBuffer(d)){
+      if(buffers && Buffer.isBuffer(d)){
         type = T_BUFFER
         snatcher = tobuf
         data = []
